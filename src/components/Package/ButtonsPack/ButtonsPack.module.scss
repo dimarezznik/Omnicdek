@@ -15,18 +15,4 @@
     letter-spacing: 0.727273px;
     cursor: pointer;
   }
-
-  & .back {
-
-    background-color: $white;
-    color: $defaultGreen;
-    border: 1px solid $defaultGreen;
-
-  }
-
-  & .agree {
-    border: 1px solid $defaultGreen;
-    background-color: $defaultGreen;
-    color: $white;
-  }
 }

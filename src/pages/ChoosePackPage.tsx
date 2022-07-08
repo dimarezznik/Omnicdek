@@ -1,7 +1,12 @@
 import React from "react";
+import ChooseBox from "../components/ChooseBox/ChooseBox";
 
 const ChoosePackPage = () => {
-  return <div>123</div>;
+  return (
+    <section>
+      <ChooseBox />
+    </section>
+  );
 };
 
 export default ChoosePackPage;
