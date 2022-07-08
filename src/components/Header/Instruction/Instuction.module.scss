@@ -1,0 +1,26 @@
+@import "src/assets/fonts/colorFonts/colors";
+.options {
+  display: flex;
+  align-items: center;
+  gap: 55px;
+
+  & .instruction {
+    font-family: Bold;
+    text-transform: uppercase;
+    letter-spacing: 0.727273px;
+    font-size: 16px;
+    line-height: 19px;
+    color: $defaultGray;
+  }
+
+  & .postomat {
+    font-family: Bold;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 26px;
+    color: $defaultGreen;
+  }
+}
+
+
+
