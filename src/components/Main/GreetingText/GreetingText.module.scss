@@ -1,0 +1,23 @@
+@import "src/assets/fonts/colorFonts/colors";
+
+.greeting_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  margin-bottom: 60px;
+
+  & .greeting {
+    font-family: Regular;
+    font-size: 32px;
+    line-height: 38px;
+    color: $black;
+  }
+
+  & .question {
+    font-family: Regular;
+    font-size: 20px;
+    line-height: 24px;
+    color: $black;
+  }
+}
