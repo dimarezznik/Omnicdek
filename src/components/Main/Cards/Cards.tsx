@@ -7,12 +7,11 @@ import { NavLink } from "react-router-dom";
 function Cards() {
   return (
     <article className={s.cards}>
-      <NavLink to={"/post"}>
-        {" "}
-        <img src={greenCard} alt="" />{" "}
+      <NavLink to={"/confirm"}>
+        <img src={greenCard} alt="send package" />
       </NavLink>
 
-      <img src={purpleCard} alt="" />
+      <img src={purpleCard} alt="return in to shop" />
     </article>
   );
 }

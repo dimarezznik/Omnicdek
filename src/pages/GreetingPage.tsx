@@ -1,6 +1,6 @@
 import Main from "../components/Main/Main";
 
-const Greeting = () => {
+const GreetingPage = () => {
   return (
     <div>
       <Main />
@@ -8,4 +8,4 @@ const Greeting = () => {
   );
 };
 
-export default Greeting;
+export default GreetingPage;

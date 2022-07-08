@@ -1,4 +1,5 @@
 @import "src/assets/fonts/colorFonts/colors";
+@import "src/assets/fonts/fontFamily/fontFamily";
 
 .greeting_text {
   display: flex;
@@ -8,14 +9,14 @@
   margin-bottom: 60px;
 
   & .greeting {
-    font-family: Regular;
+    font-family: $regular;
     font-size: 32px;
     line-height: 38px;
     color: $black;
   }
 
   & .question {
-    font-family: Regular;
+    font-family: $regular;
     font-size: 20px;
     line-height: 24px;
     color: $black;
