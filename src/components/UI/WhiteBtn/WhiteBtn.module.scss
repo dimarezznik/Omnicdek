@@ -1,0 +1,11 @@
+@import "src/assets/fonts/colorFonts/colors";
+@import "src/assets/fonts/fontFamily/fontFamily";
+@import "src/mixinStyles/buttonStyle";
+
+
+.agree {
+  @include button-style;
+  border: 1px solid $defaultGreen;
+  background-color: $defaultGreen;
+  color: $white;
+}
