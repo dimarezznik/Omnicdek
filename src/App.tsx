@@ -1,16 +1,17 @@
 import React from "react";
 import { Routes, Route, Link } from "react-router-dom";
 import GreetingPage from "./pages/GreetingPage";
-import Header from "./components/Header/Header";
 import ConfirmPage from "./pages/ConfirmPage";
+import Layout from "./components/Layout";
 
 function App() {
   return (
     <div className="App">
-      <Header />
       <Routes>
-        <Route path="/" element={<GreetingPage />} />
-        <Route path={"/confirm"} element={<ConfirmPage />} />
+        <Route path={"/"} element={<Layout />}>
+          <Route index element={<GreetingPage />} />
+          <Route path={"/confirm"} element={<ConfirmPage />} />
+        </Route>
       </Routes>
     </div>
   );
