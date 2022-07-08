@@ -1,7 +1,7 @@
 import AxiosOrigin from "axios";
 
 const axios = AxiosOrigin.create({
-  baseURL: "https://dev.hub.omnic.solutions/",
+  baseURL: process.env.REACT_APP_BASE_URL,
 });
 
 export default axios;
