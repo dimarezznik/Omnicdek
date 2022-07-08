@@ -8,7 +8,9 @@ const ButtonsPack = () => {
       <NavLink to={"/"}>
         <button className={s.back}>Назад</button>
       </NavLink>
-      <button className={s.agree}>Я хорошо упаковал</button>
+      <NavLink to={"/boxes"}>
+        <button className={s.agree}>Я хорошо упаковал</button>
+      </NavLink>
     </div>
   );
 };
