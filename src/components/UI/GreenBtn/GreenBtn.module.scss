@@ -1,6 +1,9 @@
 @import "src/assets/fonts/colorFonts/colors";
+@import "src/assets/fonts/fontFamily/fontFamily";
+@import "src/mixinStyles/buttonStyle";
 
 .back {
+  @include button-style;
   background-color: $white;
   color: $defaultGreen;
   border: 1px solid $defaultGreen;

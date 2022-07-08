@@ -1,0 +1,13 @@
+@import "src/assets/fonts/colorFonts/colors";
+
+
+@mixin button-style {
+  padding: 16px 50px;
+  font-family: $bold;
+  text-transform: uppercase;
+  border-radius: 4px;
+  font-size: 14px;
+  line-height: 17px;
+  letter-spacing: 0.727273px;
+  cursor: pointer;
+}
