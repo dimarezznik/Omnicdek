@@ -3,16 +3,24 @@ import s from "./ChooseBox.module.scss";
 import GreenBtn from "../UI/GreenBtn/GreenBtn";
 import WhiteBtn from "../UI/WhiteBtn/WhiteBtn";
 import {NavLink} from "react-router-dom";
-import {useAppSelector} from "../../store/hooks";
+import { useAppDispatch, useAppSelector } from "../../store/hooks";
+import { fetchGetPackages } from "../../store/actionCreators";
 
 const ChooseBox = () => {
-    const {infoDevice} = useAppSelector<any>(state => state.boxes)
+  const {infoDevice} = useAppSelector<any>(state => state.boxes)
+  const {boxes} = useAppSelector<any>(state => state.boxes)
+  const dispatch = useAppDispatch()
+
+  useEffect(() => {
+      dispatch(fetchGetPackages())
+  }, [dispatch])
 
     return (
         <div className={s.choose_text}>
             <span className={s.text}>Выберите размер посылки</span>
             <div>
-                <div>123</div>
+              {boxes?.map((box: { type: React.Key | null | undefined; }) => <div key={box.type}>123</div>)}
+
             </div>
             <div className={s.buttons}>
 

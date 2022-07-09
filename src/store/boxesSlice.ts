@@ -13,9 +13,13 @@ const boxesSlice = createSlice({
     getInfoDevice(state, action) {
       state.infoDevice = action.payload;
     },
+
+    getPackages(state, action) {
+      state.boxes = action.payload.data.cell_types
+    }
   },
 });
 
-export const { getInfoDevice } = boxesSlice.actions;
+export const { getInfoDevice, getPackages } = boxesSlice.actions;
 
 export default boxesSlice.reducer;
