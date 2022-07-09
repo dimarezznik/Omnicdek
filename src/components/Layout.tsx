@@ -1,13 +1,17 @@
-import React from "react";
+import React, {FC} from "react";
 import { Outlet } from "react-router-dom";
 import Header from "./Header/Header";
 
+export interface IInfoDevice {
+    infoDevice: any
+}
+
 const Layout = () => {
   return (
-    <div>
-      <Header />
+    <>
+      <Header/>
       <Outlet />
-    </div>
+    </>
   );
 };
 

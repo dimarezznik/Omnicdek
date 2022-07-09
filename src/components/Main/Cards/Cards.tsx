@@ -3,13 +3,17 @@ import s from "./Cards.module.scss";
 import purpleCard from "../../../assets/images/purpleCard.svg";
 import greenCard from "../../../assets/images/greenCard.svg";
 import { NavLink } from "react-router-dom";
+import {useAppSelector} from "../../../store/hooks";
 
 function Cards() {
+    const {infoDevice} = useAppSelector<any>(state => state.boxes)
   return (
     <article className={s.cards}>
-      <NavLink to={"/confirm"}>
-        <img src={greenCard} alt="send package" />
-      </NavLink>
+
+        {infoDevice !== null &&
+            <NavLink to={`/${infoDevice.data.uid}/confirm`}>
+            <img src={greenCard} alt="send package" />
+        </NavLink>}
 
       <img src={purpleCard} alt="return in to shop" />
     </article>
