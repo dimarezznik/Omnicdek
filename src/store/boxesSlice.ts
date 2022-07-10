@@ -1,12 +1,18 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-
-
+import XXS from '../assets/images/xxs.svg'
+import XS from '../assets/images/xs.svg'
+import S from '../assets/images/s.svg'
+import M from '../assets/images/m.svg'
+import L from '../assets/images/l.svg'
+import XL from '../assets/images/xl.svg'
+import XXL from '../assets/images/xxl.svg'
+import XXXL from '../assets/images/xxxl.svg'
 
 const boxesSlice = createSlice({
   name: "boxes",
   initialState: {
     boxes: [],
+    images: [XXS, XS, S, M, L, XS, XXL, XXXL],
     infoDevice: null,
   },
   reducers: {
@@ -14,8 +20,12 @@ const boxesSlice = createSlice({
       state.infoDevice = action.payload;
     },
 
-    getPackages(state, action) {
+    getPackages(state: any, action) {
       state.boxes = action.payload.data.cell_types
+      state.boxes.forEach((box: { image: any; }, index: string | number) => {
+        box.image = state.images[index]
+      })
+      console.log(state.boxes);
     }
   },
 });

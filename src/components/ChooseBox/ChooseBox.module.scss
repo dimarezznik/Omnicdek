@@ -2,6 +2,7 @@
 @import "src/assets/fonts/fontFamily/fontFamily";
 
 .choose_text {
+  width: 100%;
   padding: 52px;
   display: flex;
   flex-direction: column;
@@ -14,5 +15,12 @@
     color: $black;
     font-size: 24px;
     line-height: 29px;
+  }
+
+  & .items {
+    display: grid;
+    grid-template-columns: 20% 30% 50%;
+    grid-column-gap: 30px;
+    grid-row-gap: 30px;
   }
 }

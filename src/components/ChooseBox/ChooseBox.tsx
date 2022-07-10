@@ -5,6 +5,7 @@ import WhiteBtn from "../UI/WhiteBtn/WhiteBtn";
 import {NavLink} from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { fetchGetPackages } from "../../store/actionCreators";
+import BoxItem from "./BoxItem/BoxItem";
 
 const ChooseBox = () => {
   const {infoDevice} = useAppSelector<any>(state => state.boxes)
@@ -18,8 +19,12 @@ const ChooseBox = () => {
     return (
         <div className={s.choose_text}>
             <span className={s.text}>Выберите размер посылки</span>
-            <div>
-              {boxes?.map((box: { type: React.Key | null | undefined; }) => <div key={box.type}>123</div>)}
+            <div className={s.items}>
+              {boxes?.map((box: any, index: number) => <BoxItem key={box.type}
+                                                                isEmpty={box.has_empty}
+                                                                params={box.params}
+                                                                image={box.image}
+                                                                index={index}/>)}
 
             </div>
             <div className={s.buttons}>
