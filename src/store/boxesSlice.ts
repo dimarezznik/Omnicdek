@@ -11,8 +11,10 @@ import XXXL from '../assets/images/xxxl.svg'
 const boxesSlice = createSlice({
   name: "boxes",
   initialState: {
-    boxes: [],
-    images: [XXS, XS, S, M, L, XS, XXL, XXXL],
+    boxesSmall: [],
+    boxesMid: [],
+    boxesLarge: [],
+    images: [XXS, M, XXL, XS, L, XXXL, S, XXS],
     infoDevice: null,
   },
   reducers: {
