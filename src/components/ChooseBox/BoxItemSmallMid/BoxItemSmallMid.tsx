@@ -1,20 +1,17 @@
 import React, { FC, useState } from "react";
 import "./BoxItemSmallMid.scss";
 
-const BoxItemSmallMid: FC<any> = ({
-  isNotEmpty,
-  params,
-  image,
-  index,
-  isEmptyBox,
-}) => {
+const BoxItemSmallMid: FC<any> = ({ isNotEmpty, image, index, isEmptyBox }) => {
   const [item_small, setItemLarge] = useState(`itemS item_small${index}`);
+
   const isEmpty = () => {
     isEmptyBox(isNotEmpty, item_small, setItemLarge);
   };
+
   const removeFocus = () => {
     setItemLarge(`itemS item_small${index}`);
   };
+
   return (
     <div
       className={item_small}

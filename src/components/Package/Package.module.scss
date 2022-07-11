@@ -12,6 +12,10 @@
   & .container {
     width: 550px;
 
+    @media (max-width: 767px) {
+      width: 380px;
+    }
+
       & .send_text {
         font-family: $regular;
         text-align: center;

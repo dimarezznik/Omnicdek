@@ -6,6 +6,10 @@
   align-items: center;
   gap: 55px;
 
+  @media (max-width: 767px) {
+    gap: 15px;
+  }
+
   & .instruction {
     font-family: $bold;
     text-transform: uppercase;
@@ -13,6 +17,10 @@
     font-size: 16px;
     line-height: 19px;
     color: $defaultGray;
+
+    @media (max-width: 767px) {
+      font-size: 12px;
+    }
   }
 
   & .postomat {
@@ -21,6 +29,10 @@
     font-size: 22px;
     line-height: 26px;
     color: $defaultGreen;
+
+    @media (max-width: 767px) {
+      font-size: 18px;
+    }
   }
 }
 
