@@ -1,8 +1,8 @@
-import React from "react";
+import React, { FC } from "react";
 import s from "./OptionsPack.module.scss";
 import Pack from "../../../assets/images/package.svg";
 
-const OptionsPack = () => {
+const OptionsPack: FC = () => {
   return (
     <div className={s.instruction_packing}>
       <div>

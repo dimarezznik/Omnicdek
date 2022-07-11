@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import s from "./Package.module.scss";
 import OptionsPack from "./OptionsPack/OptionsPack";
 import ButtonsPack from "./ButtonsPack/ButtonsPack";
 
-const Package = () => {
+const Package: FC = () => {
   return (
     <section className={s.confirm_main}>
       <div className={s.container}>
