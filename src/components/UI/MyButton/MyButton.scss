@@ -2,10 +2,16 @@
 @import "src/assets/fonts/fontFamily/fontFamily";
 @import "src/mixinStyles/buttonStyle";
 
-
-.agree {
+.white_btn {
   @include button-style;
+  background-color: $white;
+  color: $defaultGreen;
   border: 1px solid $defaultGreen;
+}
+
+.green_btn {
+  @include button-style;
   background-color: $defaultGreen;
   color: $white;
+  border: 1px solid $white;
 }

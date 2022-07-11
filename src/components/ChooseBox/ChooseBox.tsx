@@ -1,7 +1,6 @@
 import React, { FC, useCallback, useEffect, useState } from "react";
 import s from "./ChooseBox.module.scss";
-import GreenBtn from "../UI/GreenBtn/GreenBtn";
-import WhiteBtn from "../UI/WhiteBtn/WhiteBtn";
+import MyButton from "../UI/MyButton/MyButton";
 import { NavLink } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { fetchGetPackages } from "../../store/actionCreators";
@@ -73,18 +72,18 @@ const ChooseBox: FC = () => {
       <div className={s.buttons}>
         {infoDevice !== null && (
           <NavLink to={`/${infoDevice.data.uid}/confirm`}>
-            <GreenBtn>Назад</GreenBtn>
+            <MyButton className={"white_btn"}>Назад</MyButton>
           </NavLink>
         )}
 
-        <WhiteBtn activeBtn={activeBtn}>
+        <MyButton activeBtn={activeBtn} className={"green_btn"}>
           <div
             className={s.btn}
             style={!activeBtn ? { opacity: 1 } : { opacity: 0.5 }}
           >
             Подтвердить
           </div>
-        </WhiteBtn>
+        </MyButton>
       </div>
     </div>
   );

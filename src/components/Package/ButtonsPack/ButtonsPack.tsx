@@ -1,8 +1,7 @@
 import React, { FC } from "react";
 import s from "./ButtonsPack.module.scss";
 import { NavLink } from "react-router-dom";
-import GreenBtn from "../../UI/GreenBtn/GreenBtn";
-import WhiteBtn from "../../UI/WhiteBtn/WhiteBtn";
+import MyButton from "../../UI/MyButton/MyButton";
 import { useAppSelector } from "../../../store/hooks";
 
 const ButtonsPack: FC = () => {
@@ -10,12 +9,12 @@ const ButtonsPack: FC = () => {
   return (
     <div className={s.buttons}>
       <NavLink to={"/"}>
-        <GreenBtn>Назад</GreenBtn>
+        <MyButton className={"white_btn"}>Назад</MyButton>
       </NavLink>
 
       {infoDevice !== null && (
         <NavLink to={`/${infoDevice.data.uid}/boxes`}>
-          <WhiteBtn>Я хорошо упаковал</WhiteBtn>
+          <MyButton className={"green_btn"}>Я хорошо упаковал</MyButton>
         </NavLink>
       )}
     </div>
