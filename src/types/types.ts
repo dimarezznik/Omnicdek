@@ -40,7 +40,7 @@ interface IData {
   location: ILocation;
 }
 
-interface IInfoDevice {
+export interface IInfoDevice {
   data: IData;
   extra: object;
   ids: null;

@@ -35,7 +35,6 @@ const boxesSlice = createSlice({
 
     getPackages(state, action) {
       const boxes = action.payload.data.cell_types;
-      console.log(boxes);
       boxes.forEach((box: { image: IImage }, index: number) => {
         box.image = state.images[index];
       });

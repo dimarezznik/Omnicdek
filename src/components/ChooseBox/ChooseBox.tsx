@@ -7,11 +7,12 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { fetchGetPackages } from "../../store/actionCreators";
 import BoxItemSmallMid from "./BoxItemSmallMid/BoxItemSmallMid";
 import BoxItemLarge from "./BoxItemLarge/BoxItemLarge";
-import { IInfoDevice } from "../Layout";
-import { IPackage } from "../../types/types";
+import { IInfoDevice, IPackage } from "../../types/types";
 
 const ChooseBox: FC = () => {
-  const { infoDevice } = useAppSelector<IInfoDevice>((state) => state.boxes);
+  const infoDevice = useAppSelector<IInfoDevice | null>(
+    (state) => state.boxes.infoDevice
+  );
   const boxesSmallMid = useAppSelector<IPackage[]>(
     (state) => state.boxes.boxesSmallMid
   );
