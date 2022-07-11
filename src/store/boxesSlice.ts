@@ -7,39 +7,44 @@ import L from "../assets/images/l.svg";
 import XL from "../assets/images/xl.svg";
 import XXL from "../assets/images/xxl.svg";
 import XXXL from "../assets/images/xxxl.svg";
+import { IImage, IPackage, IStates } from "../types/types";
+
+const initialState: IStates = {
+  boxesSmallMid: [],
+  boxesLarge: [],
+  images: [
+    { image: XXS, size: "XXS", box: "20х11 см" },
+    { image: XS, size: "XS", box: "20x16 см" },
+    { image: S, size: "S", box: "38x11 см" },
+    { image: M, size: "M", box: "20x21 см" },
+    { image: L, size: "L", box: "38x16 см" },
+    { image: XL, size: "XL", box: "38x21 см" },
+    { image: XXL, size: "XXL", box: "64x21 см" },
+    { image: XXXL, size: "XXXL", box: "64x36 см" },
+  ],
+  infoDevice: null,
+};
 
 const boxesSlice = createSlice({
   name: "boxes",
-  initialState: {
-    boxesSmallMid: [],
-    boxesLarge: [],
-    images: [
-      { image: XXS, size: "XXS", box: "20х11 см" },
-      { image: XS, size: "XS", box: "20x16 см" },
-      { image: S, size: "S", box: "38x11 см" },
-      { image: M, size: "M", box: "20x21 см" },
-      { image: L, size: "L", box: "38x16 см" },
-      { image: XL, size: "XL", box: "38x21 см" },
-      { image: XXL, size: "XXL", box: "64x21 см" },
-      { image: XXXL, size: "XXXL", box: "64x36 см" },
-    ],
-    infoDevice: null,
-  },
+  initialState,
   reducers: {
     getInfoDevice(state, action) {
       state.infoDevice = action.payload;
     },
 
-    getPackages(state: any, action) {
+    getPackages(state, action) {
       const boxes = action.payload.data.cell_types;
-      boxes.forEach((box: { image: any }, index: string | number) => {
+      console.log(boxes);
+      boxes.forEach((box: { image: IImage }, index: number) => {
         box.image = state.images[index];
       });
       state.boxesSmallMid = boxes.filter(
-        (box: any) => box.type.includes("205") || box.type.includes("385")
+        (box: IPackage) => box.type.includes("205") || box.type.includes("385")
       );
-      state.boxesLarge = boxes.filter((box: any) => box.type.includes("646"));
-      console.log();
+      state.boxesLarge = boxes.filter((box: IPackage) =>
+        box.type.includes("646")
+      );
     },
   },
 });

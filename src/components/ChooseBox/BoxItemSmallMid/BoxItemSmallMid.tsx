@@ -1,8 +1,16 @@
 import React, { FC, useState } from "react";
 import "./BoxItemSmallMid.scss";
+import { IBoxes } from "../../../types/types";
 
-const BoxItemSmallMid: FC<any> = ({ isNotEmpty, image, index, isEmptyBox }) => {
-  const [item_small, setItemLarge] = useState(`itemS item_small${index}`);
+const BoxItemSmallMid: FC<IBoxes> = ({
+  isNotEmpty,
+  image,
+  index,
+  isEmptyBox,
+}) => {
+  const [item_small, setItemLarge] = useState<string>(
+    `itemS item_small${index}`
+  );
 
   const isEmpty = () => {
     isEmptyBox(isNotEmpty, item_small, setItemLarge);

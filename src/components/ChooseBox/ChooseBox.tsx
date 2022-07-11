@@ -7,11 +7,17 @@ import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { fetchGetPackages } from "../../store/actionCreators";
 import BoxItemSmallMid from "./BoxItemSmallMid/BoxItemSmallMid";
 import BoxItemLarge from "./BoxItemLarge/BoxItemLarge";
+import { IInfoDevice } from "../Layout";
+import { IPackage } from "../../types/types";
 
 const ChooseBox: FC = () => {
-  const { infoDevice } = useAppSelector<any>((state) => state.boxes);
-  const { boxesSmallMid } = useAppSelector<any>((state) => state.boxes);
-  const { boxesLarge } = useAppSelector<any>((state) => state.boxes);
+  const { infoDevice } = useAppSelector<IInfoDevice>((state) => state.boxes);
+  const boxesSmallMid = useAppSelector<IPackage[]>(
+    (state) => state.boxes.boxesSmallMid
+  );
+  const boxesLarge = useAppSelector<IPackage[]>(
+    (state) => state.boxes.boxesLarge
+  );
   const dispatch = useAppDispatch();
   const [activeBtn, setActiveBtn] = useState(true);
 
@@ -20,7 +26,11 @@ const ChooseBox: FC = () => {
   }, [dispatch]);
 
   const isEmptyBox = useCallback(
-    (isNotEmpty: boolean, item_large: string, setItem: any) => {
+    (
+      isNotEmpty: boolean,
+      item_large: string,
+      setItem: (el: string) => void
+    ) => {
       if (isNotEmpty && !item_large.includes("green")) {
         setItem(item_large + " green");
         setActiveBtn(false);
@@ -37,7 +47,7 @@ const ChooseBox: FC = () => {
       <span className={s.text}>Выберите размер посылки</span>
       <div className={s.items}>
         <div className={s.small_mid_items}>
-          {boxesSmallMid?.map((box: any, index: number) => (
+          {boxesSmallMid?.map((box: IPackage, index: number) => (
             <BoxItemSmallMid
               isEmptyBox={isEmptyBox}
               key={box.type}
@@ -48,7 +58,7 @@ const ChooseBox: FC = () => {
           ))}
         </div>
         <div className={s.large_items}>
-          {boxesLarge?.map((box: any, index: number) => (
+          {boxesLarge?.map((box: IPackage, index: number) => (
             <BoxItemLarge
               isEmptyBox={isEmptyBox}
               key={box.type}
