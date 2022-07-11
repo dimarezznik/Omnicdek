@@ -1,9 +1,9 @@
-import React from "react";
+import React, { FC } from "react";
 import GreetingText from "./GreetingText/GreetingText";
 import s from "./Main.module.scss";
 import Cards from "./Cards/Cards";
 
-const Main = () => {
+const Main: FC = () => {
   return (
     <section className={s.main}>
       <GreetingText />

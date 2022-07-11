@@ -1,7 +1,7 @@
-import React from "react";
+import React, { FC } from "react";
 import s from "./GreetingText.module.scss";
 
-const GreetingText = () => {
+const GreetingText: FC = () => {
   return (
     <article className={s.greeting_text}>
       <span className={s.greeting}>Приветствуем Вас!</span>

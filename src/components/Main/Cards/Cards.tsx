@@ -1,11 +1,11 @@
-import React from "react";
+import React, { FC } from "react";
 import s from "./Cards.module.scss";
 import purpleCard from "../../../assets/images/purpleCard.svg";
 import greenCard from "../../../assets/images/greenCard.svg";
 import { NavLink } from "react-router-dom";
 import { useAppSelector } from "../../../store/hooks";
 
-function Cards() {
+const Cards: FC = () => {
   const { infoDevice } = useAppSelector<any>((state) => state.boxes);
   return (
     <article className={s.cards}>
@@ -20,6 +20,6 @@ function Cards() {
       </NavLink>
     </article>
   );
-}
+};
 
 export default Cards;
