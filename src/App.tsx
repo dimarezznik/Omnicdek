@@ -7,6 +7,7 @@ import ChoosePackPage from "./pages/ChoosePackPage";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { fetchInfoDevice } from "./store/actionCreators";
 import { IInfoDevice } from "./types/types";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -46,6 +47,7 @@ function App() {
               element={<ChoosePackPage />}
             />
           )}
+          <Route path={"*"} element={<ErrorPage />} />
         </Route>
       </Routes>
     </div>

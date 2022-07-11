@@ -15,7 +15,7 @@ const Cards: FC = () => {
         </NavLink>
       )}
 
-      <NavLink to={"#"}>
+      <NavLink to={"/error404"}>
         <img src={purpleCard} alt="return in to shop" />
       </NavLink>
     </article>
