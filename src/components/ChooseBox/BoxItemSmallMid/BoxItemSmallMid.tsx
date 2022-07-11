@@ -32,7 +32,7 @@ const BoxItemSmallMid: FC<IBoxes> = ({
       </div>
       <div className="size">
         <span className="size_val">{image.size}</span>
-        <span>{image.box}</span>
+        <span className="size_num">{image.box}</span>
       </div>
     </div>
   );
