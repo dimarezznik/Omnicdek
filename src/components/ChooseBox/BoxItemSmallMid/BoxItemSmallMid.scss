@@ -1,0 +1,29 @@
+@import "src/assets/fonts/colorFonts/colors";
+
+.itemS{
+  border: 1px solid rgba(85, 115, 133, 0.4);
+  box-shadow: 0 0 3px rgba($black, 0.5);
+  display: flex;
+  justify-content: start;
+  gap: 50px;
+  align-items: center;
+  border-radius: 6px;
+  height: 150px;
+  width: 300px;
+}
+
+.item_small0, .item_small3 {
+  height: 120px;
+}
+
+.item_small1, .item_small4 {
+  height: 150px;
+}
+
+.item_small2, .item_small5 {
+  height: 180px;
+}
+
+.imageS {
+  margin-left: 50px;
+}

@@ -2,8 +2,8 @@
 @import "src/assets/fonts/fontFamily/fontFamily";
 
 .choose_text {
+  padding-top: 50px;
   width: 100%;
-  padding: 52px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -15,12 +15,43 @@
     color: $black;
     font-size: 24px;
     line-height: 29px;
+    margin-bottom: 50px;
   }
 
   & .items {
-    display: grid;
-    grid-template-columns: 20% 30% 50%;
-    grid-column-gap: 30px;
-    grid-row-gap: 30px;
+    width: 1200px;
+    display: flex;
+    height: 600px;
+
+    & .small_mid_items {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      justify-content: start;
+      align-items: end;
+      gap: 30px;
+    }
+
+    & .large_items {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: end;
+      gap: 30px;
+      width: 100%;
+    }
   }
+
+  & .buttons {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+
+    & .btn {
+      width: 100%;
+      color: white;
+    }
+  }
+
 }

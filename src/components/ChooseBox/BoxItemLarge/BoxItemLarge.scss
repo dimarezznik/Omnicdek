@@ -1,0 +1,55 @@
+@import "src/assets/fonts/colorFonts/colors";
+@import "src/assets/fonts/fontFamily/fontFamily";
+
+.itemL {
+  border: 1px solid rgba(85, 115, 133, 0.4);
+  box-shadow: 0 0 3px rgba($black, 0.5);
+  display: flex;
+  justify-content: start;
+  gap: 100px;
+  align-items: center;
+  border-radius: 6px;
+  width: 540px;
+}
+
+.green {
+  border: 2px solid $defaultGreen;
+  box-shadow: 0 0 3px rgba($black, 0.5);
+}
+
+.red {
+    border: 2px solid red;
+    box-shadow: 0 0 3px rgba($black, 0.5);
+}
+
+.item_large0 {
+  height: 220px;
+}
+
+.item_large1 {
+  height: 262px;
+}
+
+.imageL {
+  margin-left: 70px;
+}
+
+.size {
+  display: flex;
+  gap: 15px;
+  flex-direction: column;
+}
+
+.size_val {
+  font-family: $regular;
+  color: $defaultGreen;
+  font-size: 18px;
+  line-height: 22px;
+}
+
+.size_num {
+  font-family: $regular;
+  color: $darkGray;
+  font-size: 14px;
+  line-height: 17px;
+}
