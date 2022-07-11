@@ -2,7 +2,11 @@ import React from "react";
 import Package from "../components/Package/Package";
 
 function ConfirmPage() {
-  return <Package />;
+  return (
+    <>
+      <Package />
+    </>
+  );
 }
 
 export default ConfirmPage;
